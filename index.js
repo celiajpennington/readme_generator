@@ -13,10 +13,8 @@
         //Questions Git hubuser name added with alink to my github profile, email address with instructions "you can reach me at"
 
 
-
-
 // TODO: Include packages needed for this application
-const inquirer = require("./node_modules/inquirer");
+const inquirer = require("inquirer");
 const fs = require ("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 
@@ -45,7 +43,7 @@ const questions = [
     {
         type: "list",
         message: "Which license would you like to use?",
-        choices: ["MIT", "Apache", "GPL"],
+        choices: ["MIT", "Apache", "Boost"],
         name: "license"
     },
     {
@@ -60,15 +58,14 @@ const questions = [
     },
     {
         type: "input",
-        message: "Do you have any questions? ",
-        name: "questions"
+        message: "What is your github username? ",
+        name: "username"
     },
     {
         type: "input",
-        message: "What is your github username? ",
-        name: "githubusername"
+        message: "Please provide a link to your github profile ",
+        name: "githubProfile"
     },
-   
     {
         type: "input",
         message: "What is your email address ",
@@ -81,9 +78,9 @@ const questions = [
 
 // // TODO: Create a function to initialize app
  function init() {
-    inquirer.prompt(questions).then(response => fs.writeFileSync("README2.md", generateMarkdown(response)))
-
-
+   
+    inquirer.prompt(questions).then(response => fs.writeFileSync("README8.md", generateMarkdown(response)))
+  
  }
 
 // // Function call to initialize app
