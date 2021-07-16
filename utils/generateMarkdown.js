@@ -1,9 +1,9 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+
 
 const inquirer = require("inquirer");
 
-// BADGE
-let response;
+// Function that returns license badge based on user's selection
+l
 function renderLicenseBadge(license) {
  
  if (license === 'MIT') {
@@ -14,8 +14,7 @@ function renderLicenseBadge(license) {
   return `[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`
  }
 }
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+//Function that returns a link based on what license the user has selected
 function renderLicenseLink(license) {
   if (license === 'MIT') {
     return 'https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt'
@@ -25,15 +24,7 @@ function renderLicenseLink(license) {
     return `www.boost.org/LICENSE_1_0.txt`
   }
 }
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
 
-//Might not need to use this
-// function renderLicenseSection(license) {
-//   if (license === MIT) {
-//     return `This is sponsered by MIT license all right reserved`
-//   }
-// }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(inquirerResponse) {
