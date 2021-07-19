@@ -3,7 +3,7 @@
 const inquirer = require("inquirer");
 
 // Function that returns license badge based on user's selection
-l
+
 function renderLicenseBadge(license) {
  
  if (license === 'MIT') {
